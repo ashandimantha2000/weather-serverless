@@ -1,6 +1,6 @@
 // export { default as weather } from './weather';
 
-import {create, fetch, fetchAll} from "./weather";
+import {create, fetch, fetchAll, findweather} from "./weather";
 // import weather from "./weather";
 
 const functions = {
@@ -8,6 +8,7 @@ const functions = {
     create,
     fetch,
     fetchAll,
+    findweather
 };
 
 export default functions;

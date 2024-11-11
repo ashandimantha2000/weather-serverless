@@ -1,4 +1,4 @@
-import { Weather } from "src/entities/employee.entity";
+import { Weather } from "src/entities/weather.entity";
 import { DataSource, EntityManager } from "typeorm";
 
 let dataSource: DataSource;

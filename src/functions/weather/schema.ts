@@ -5,7 +5,7 @@ export default {
         city: { type: "string" },
         temperature: { type: "number" },
         humidity: { type: "number" },
-        description: { type: "string" },
+        // description: { type: "string" },
     },
-    required: ["city", "temperature", "humidity", "description"],
+    required: ["city", "temperature", "humidity"],
 }

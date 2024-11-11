@@ -1,7 +1,7 @@
 import type { ValidatedEventAPIGatewayProxyEvent } from "@libs/api-gateway";
 import { successResponse } from "@libs/api-gateway";
 import { middyfy } from "@libs/lambda";
-import { Weather } from 'src/entities/employee.entity';
+import { Weather } from 'src/entities/weather.entity';
 import { create } from 'src/functions/weather/weather-service';
 
 import schema from "./schema";

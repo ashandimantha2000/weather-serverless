@@ -16,6 +16,19 @@
 import schema from "./schema";
 import { handlerPath } from "@libs/handler-resolver";
 
+//find weather
+const findweather = {
+  handler: `${handlerPath(__dirname)}/findweather.main`,
+  events: [
+    {
+      http: {
+        method: "get",
+        path: "findweather",
+      },
+    },
+  ],
+};
+
 const create = {
   handler: `${handlerPath(__dirname)}/create.main`,
   events: [
@@ -28,6 +41,7 @@ const create = {
             "application/json": schema,
           },
         },
+        // private: true
       },
     },
   ],
@@ -39,7 +53,7 @@ const fetch = {
     {
       http: {
         method: "get",
-        path: "weather/{weatherId}",
+        path: "weatherbyid/{weatherId}",
       },
     },
   ],
@@ -57,6 +71,4 @@ const fetchAll = {
   ],
 };
 
-
-
-export { create, fetch, fetchAll };
+export { create, fetch, fetchAll,findweather };

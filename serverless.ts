@@ -54,6 +54,8 @@ const serverlessConfiguration: AWS = {
       platform: "node",
       concurrency: 10,
     },
+    allowedHttpHeaders:
+      'Accept,Authorization,Content-Type,Content-Length,x-api-key',
   },
   //added a resouce section
   resources:{}

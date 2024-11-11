@@ -21,6 +21,7 @@ export class Weather extends BaseEntity {
   @Column({ type: "float" })
   humidity: number;
   
-  @Column({ type: "varchar" })
-  description: string;
+  // @Column({ type: "varchar" })
+  // description: string;
+  //   temp: any;
 }
