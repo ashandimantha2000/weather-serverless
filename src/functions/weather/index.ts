@@ -45,5 +45,18 @@ const fetch = {
   ],
 };
 
+const fetchAll = {
+  handler: `${handlerPath(__dirname)}/fetchAll.main`,
+  events: [
+    {
+      http: {
+        method: "get",
+        path: "weatherall",
+      },
+    },
+  ],
+};
 
-export { create, fetch };
+
+
+export { create, fetch, fetchAll };

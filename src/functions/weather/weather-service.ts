@@ -33,4 +33,20 @@ const fetch = async (weatherId: string): Promise<Weather> => {
     }
 }
 
-export { create, fetch };
+//fetch all
+const fetchAll = async (): Promise<Weather[]> => {
+    try {
+        const connection = await getDatabaseConnection();
+        if (!connection) {
+            throw new Error("Database connection is not available");
+        }
+        const weatherRepository = connection.getRepository(Weather);
+        const weather: Weather[] = await weatherRepository.find();
+        return weather;
+    } catch (e) {
+        console.log("Failed to fetch weather data", e);
+        throw new Error(e);
+    }
+}
+
+export { create, fetch, fetchAll };
