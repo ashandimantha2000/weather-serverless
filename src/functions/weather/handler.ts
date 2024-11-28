@@ -22,6 +22,7 @@ export const main = async (event: any) => {
     };
   }
 
+
   try {
     const response = await axios.get<WeatherResponse>(
       `${BASE_URL}?q=${cityName}&appid=${API_KEY}&units=metric`
